@@ -12,3 +12,17 @@
     background-color: #54518A;
     width: 100%;
 }
+img.mobile {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+.left-column {
+    display: none;
+}
+img.desktop {
+    display: none;
+}
+img.mobile {
+    display: block;
+}
+}

@@ -31,7 +31,8 @@ function render_kickstarter_promo( $attributes ) {
 							<h1 class="text-6xl mb-4 kickstarter-heading"><?php echo $heading; ?></h1>
 							<p class="text-4xl mb-6 kickstarter-subheading"><?php echo nl2br( $description ); ?></p>
 							<p class="text-3xl mb-6 kickstarter-link text-[#292644]">(<a class="text-[#292644] no-underline" href="https://<?php echo $note; ?>"><?php echo $note; ?></a>)</p>
-							<img class="ml-auto" src="<?php echo esc_url( plugins_url( 'assets/images/arrow-desktop.png', SWITCHBOARD_BLOCKS_PLUGIN_FILE ) ); ?>">
+							<img class="ml-auto desktop" src="<?php echo esc_url( plugins_url( 'assets/images/arrow-desktop.png', SWITCHBOARD_BLOCKS_PLUGIN_FILE ) ); ?>">
+							<img class="m-auto mobile" src="<?php echo esc_url( plugins_url( 'assets/images/arrow-mobile.png', SWITCHBOARD_BLOCKS_PLUGIN_FILE ) ); ?>">
 						</div>
 						<div class="md:w-1/2 mt-8 md:mt-0 text-center">
 							<?php if ( $main_image ) : ?>
