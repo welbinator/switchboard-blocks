@@ -15,10 +15,30 @@
 img.mobile {
     display: none;
 }
-@media screen and (max-width: 768px) {
+.right-column {
+    width: 82%;
+}
+.hero-right, .hero-left {
+    width: 50%;
+}
+@media screen and (max-width: 1270px) {
+   
 .left-column {
     display: none;
 }
+.right-column {
+    width: 100%;
+}
+.hero-right, .hero-left {
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 1135px) {
+    .hero-wrapper {
+        flex-direction: column;
+    }
+
 img.desktop {
     display: none;
 }
