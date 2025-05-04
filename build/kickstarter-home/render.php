@@ -29,12 +29,12 @@ function render_kickstarter_promo( $attributes ) {
 					<div class="relative flex items-center mb-16 pt-8 hero-wrapper">
 						<div class="text-center md:text-right pr-4 md:pr-12 rotate-[-6deg] hero-left">
 							<h1 class="text-6xl mb-4 kickstarter-heading"><?php echo $heading; ?></h1>
-							<p class="text-4xl mb-6 kickstarter-subheading"><?php echo nl2br( $description ); ?></p>
+							<p class="text-4xl mb-6 max-w-[70%] mx-auto kickstarter-subheading"><?php echo $description; ?></p>
 							<p class="text-3xl mb-6 kickstarter-link text-[#292644]">(<a class="text-[#292644] no-underline" href="https://<?php echo $note; ?>"><?php echo $note; ?></a>)</p>
 							<img class="ml-auto desktop" src="<?php echo esc_url( plugins_url( 'assets/images/arrow-desktop.png', SWITCHBOARD_BLOCKS_PLUGIN_FILE ) ); ?>">
 							<img class="m-auto mobile" src="<?php echo esc_url( plugins_url( 'assets/images/arrow-mobile.png', SWITCHBOARD_BLOCKS_PLUGIN_FILE ) ); ?>">
 						</div>
-						<div class="mt-8 md:mt-0 text-center hero-right">
+						<div class="mt-8 text-center hero-right">
 							<?php if ( $main_image ) : ?>
 								<img src="<?php echo $main_image; ?>" alt="Main" class="mx-auto w-full max-w-[37rem]" />
 							<?php endif; ?>

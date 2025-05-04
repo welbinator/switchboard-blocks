@@ -32,6 +32,13 @@ img.mobile {
 .hero-right, .hero-left {
     width: 100%;
 }
+.hero-left {
+    transform: rotate(0deg)!important;
+
+    .text-4xl {
+        font-size: 2rem;
+    }
+}
 }
 
 @media screen and (max-width: 1135px) {
