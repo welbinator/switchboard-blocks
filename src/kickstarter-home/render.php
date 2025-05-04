@@ -28,9 +28,9 @@ function render_kickstarter_promo( $attributes ) {
 				<div class="flex flex-col">
 					<div class="relative flex flex-col md:flex-row items-center mb-16 pt-8">
 						<div class="md:w-1/2 text-center md:text-right pr-4 md:pr-12 rotate-[-6deg]">
-							<h1 class="text-7xl mb-4 kickstarter-heading"><?php echo $heading; ?></h1>
-							<p class="text-5xl mb-6 kickstarter-subheading"><?php echo nl2br( $description ); ?></p>
-							<p class="text-4xl mb-6 kickstarter-link text-[#292644]">(<a class="text-[#292644] no-underline" href="https://<?php echo $note; ?>"><?php echo $note; ?></a>)</p>
+							<h1 class="text-6xl mb-4 kickstarter-heading"><?php echo $heading; ?></h1>
+							<p class="text-4xl mb-6 kickstarter-subheading"><?php echo nl2br( $description ); ?></p>
+							<p class="text-3xl mb-6 kickstarter-link text-[#292644]">(<a class="text-[#292644] no-underline" href="https://<?php echo $note; ?>"><?php echo $note; ?></a>)</p>
 							<img class="ml-auto" src="<?php echo esc_url( plugins_url( 'assets/images/arrow-desktop.png', SWITCHBOARD_BLOCKS_PLUGIN_FILE ) ); ?>">
 						</div>
 						<div class="md:w-1/2 mt-8 md:mt-0 text-center">
