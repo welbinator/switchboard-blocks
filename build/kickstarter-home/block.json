@@ -1,0 +1,48 @@
+{
+  "apiVersion": 2,
+  "name": "gld/kickstarter-promo",
+  "title": "Kickstarter Promo",
+  "category": "widgets",
+  "icon": "megaphone",
+  "description": "Promo section for Kickstarter campaigns",
+  "keywords": [
+    "kickstarter",
+    "promo",
+    "game"
+  ],
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Join Us On Kickstarter!"
+    },
+    "description": {
+      "type": "string",
+      "default": "Sign up to be notified when our Kickstarter goes live\nAND join our VIP list to receive an exclusive gift."
+    },
+    "note": {
+      "type": "string",
+      "default": "get.TheGameOfSwitchboard.com"
+    },
+    "mainImage": {
+      "type": "string",
+      "default": "/wp-content/plugins/switchboard-blocks/assets/images/closeup.jpg"
+    },
+    "bottomImages": {
+      "type": "array",
+      "default": [
+        "/wp-content/plugins/YOUR-PLUGIN-SLUG/assets/images/left-column.png",
+        "/wp-content/plugins/YOUR-PLUGIN-SLUG/assets/images/left-column.png",
+        "/wp-content/plugins/YOUR-PLUGIN-SLUG/assets/images/left-column.png"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "style": "file:./style-index.css"
+}

@@ -1,0 +1,60 @@
+<?php
+/**
+ * Render callback for the Kickstarter Promo block.
+ */
+
+namespace GLD\Blocks;
+
+function render_kickstarter_promo( $attributes ) {
+	$heading      = esc_html( $attributes['heading'] ?? '' );
+	$description  = esc_html( $attributes['description'] ?? '' );
+	$note         = esc_html( $attributes['note'] ?? '' );
+	$main_image   = esc_url( $attributes['mainImage'] ?? '' );
+	$bottom_images = $attributes['bottomImages'] ?? [];
+
+	ob_start();
+	?>
+	<div class="kickstarter-wrapper text-white flex">
+		
+			<div class="left-column w-[18%]">
+                <img
+					alt="Static side image"
+					src="<?php echo esc_url( plugins_url( 'assets/images/left-column.png', SWITCHBOARD_BLOCKS_PLUGIN_FILE ) ); ?>"
+					class="object-cover h-full"
+				/>
+			</div>
+				
+			<div class="w-[82%] p-8">
+				<div class="flex flex-col">
+					<div class="relative flex flex-col md:flex-row items-center mb-16 pt-8">
+						<div class="md:w-1/2 text-center md:text-right pr-4 md:pr-12 rotate-[-6deg]">
+							<h1 class="text-7xl mb-4 kickstarter-heading"><?php echo $heading; ?></h1>
+							<p class="text-5xl mb-6 kickstarter-subheading"><?php echo nl2br( $description ); ?></p>
+							<p class="text-4xl mb-6 kickstarter-link text-[#292644]">(<a class="text-[#292644] no-underline" href="https://<?php echo $note; ?>"><?php echo $note; ?></a>)</p>
+							<img class="ml-auto" src="<?php echo esc_url( plugins_url( 'assets/images/arrow-desktop.png', SWITCHBOARD_BLOCKS_PLUGIN_FILE ) ); ?>">
+						</div>
+						<div class="md:w-1/2 mt-8 md:mt-0 text-center">
+							<?php if ( $main_image ) : ?>
+								<img src="<?php echo $main_image; ?>" alt="Main" class="mx-auto w-full max-w-[37rem]" />
+							<?php endif; ?>
+						</div>
+					</div>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+						<?php foreach ( $bottom_images as $img ) : ?>
+							
+								<div class="rounded h-[25rem] w-[25rem]">
+									<?php if ( $img ) : ?>
+										<img src="<?php echo esc_url( $img ); ?>" alt="" class="w-full h-full object-cover" />
+									<?php endif; ?>
+									
+								</div>
+							
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+		
+	</div>
+	<?php
+	return ob_get_clean();
+}
