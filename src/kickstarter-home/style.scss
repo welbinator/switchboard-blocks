@@ -12,7 +12,7 @@
     background-color: #54518A;
     width: 100%;
 }
-img.mobile {
+img.mobile, p.mobile {
     display: none;
 }
 .right-column {
@@ -46,10 +46,10 @@ img.mobile {
         flex-direction: column;
     }
 
-img.desktop {
+img.desktop, p.desktop {
     display: none;
 }
-img.mobile {
+img.mobile, p.mobile {
     display: block;
 }
 }

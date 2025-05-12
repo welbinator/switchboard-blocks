@@ -30,13 +30,14 @@ function render_kickstarter_promo( $attributes ) {
 						<div class="text-center md:text-right pr-4 md:pr-12 rotate-[-6deg] hero-left">
 							<h1 class="text-6xl mb-4 kickstarter-heading"><?php echo $heading; ?></h1>
 							<p class="text-4xl mb-6 max-w-[80%] mx-auto kickstarter-subheading"><?php echo $description; ?></p>
-							<p class="text-3xl mb-6 kickstarter-link text-[#292644]">(<a class="text-[#292644] no-underline" href="https://<?php echo $note; ?>"><?php echo $note; ?></a>)</p>
+							<p class="text-3xl mb-6 kickstarter-link text-[#292644] desktop">(<a class="text-[#292644] no-underline" href="https://<?php echo $note; ?>"><?php echo $note; ?></a>)</p>
 							<img class="ml-auto desktop" src="<?php echo esc_url( plugins_url( 'assets/images/arrow-desktop.png', SWITCHBOARD_BLOCKS_PLUGIN_FILE ) ); ?>">
 							<img class="m-auto mobile" src="<?php echo esc_url( plugins_url( 'assets/images/arrow-mobile.png', SWITCHBOARD_BLOCKS_PLUGIN_FILE ) ); ?>">
+							<p class="text-3xl mb-6 kickstarter-link text-[#292644] mobile">(<a class="text-[#292644] no-underline" href="https://<?php echo $note; ?>"><?php echo $note; ?></a>)</p>
 						</div>
 						<div class="mt-8 text-center hero-right">
 							<?php if ( $main_image ) : ?>
-								<img src="<?php echo $main_image; ?>" alt="Main" class="mx-auto w-full max-w-[37rem]" />
+								<a href="https://get.thegameofswitchboard.com"><img src="<?php echo $main_image; ?>" alt="Main" class="mx-auto w-full max-w-[37rem]" /></a>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -45,7 +46,7 @@ function render_kickstarter_promo( $attributes ) {
 							
 								<div class="rounded h-[25rem] w-[25rem]">
 									<?php if ( $img ) : ?>
-										<img src="<?php echo esc_url( $img ); ?>" alt="" class="w-full h-full object-cover" />
+										<a href="https://get.thegameofswitchboard.com"><img src="<?php echo esc_url( $img ); ?>" alt="" class="w-full h-full object-cover" /></a>
 									<?php endif; ?>
 									
 								</div>
